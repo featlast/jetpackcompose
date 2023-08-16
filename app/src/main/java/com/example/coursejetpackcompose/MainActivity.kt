@@ -53,7 +53,9 @@ class MainActivity : ComponentActivity() {
 //                    MyBox()
 //                    MyColumn()
 //                    MyRow()
-                    MyComplexLayout()
+//                    MyComplexLayout()
+//                    ConstraintExample()
+                    RenderFunction()
                 }
             }
         }
@@ -69,6 +71,11 @@ class MainActivity : ComponentActivity() {
 //    apiLevel = 29,
 //    showSystemUi = true,
 //)
+@Composable
+fun RenderFunction() {
+//    ConstraintExample()
+    ConstrainExampleGuide()
+}
 
 
 
