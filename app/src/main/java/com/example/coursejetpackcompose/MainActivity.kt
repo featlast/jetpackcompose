@@ -55,7 +55,8 @@ class MainActivity : ComponentActivity() {
 //                    MyRow()
 //                    MyComplexLayout()
 //                    ConstraintExample()
-                    RenderFunction()
+//                    RenderFunction()
+                    MyStateSimple()
                 }
             }
         }
