@@ -23,6 +23,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import com.example.coursejetpackcompose.ui.theme.CourseJetPackComposeTheme
+import com.example.coursejetpackcompose.ui.theme.MyTextFieldAdvanced
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +61,14 @@ class MainActivity : ComponentActivity() {
 //                    MyComplexLayout()
 //                    ConstraintExample()
 //                    RenderFunction()
-                    MyStateSimple()
+//                    MyStateSimple()
+//                MyText()
+//                    MyTextField()
+//                    MyTextFieldAdvanced()
+                    //State Hoisting
+                    var myText by remember { mutableStateOf("") }
+//                    MyTextFieldOutlined(myText){myText=it}
+                    MyButton()
                 }
             }
         }
