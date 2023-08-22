@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
@@ -26,6 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -54,6 +56,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                        MyCard()
+
+
 //                    Greeting("Android")
 //                    MyBox()
 //                    MyColumn()
@@ -66,14 +71,59 @@ class MainActivity : ComponentActivity() {
 //                    MyTextField()
 //                    MyTextFieldAdvanced()
                     //State Hoisting
-                    var myText by remember { mutableStateOf("") }
+//                    var myText by remember { mutableStateOf("") }
 //                    MyTextFieldOutlined(myText){myText=it}
-                    MyButton()
+//                    MyButton()
+//                    MyImageAdvance()
+//                    MyProgressBar()
+//                    MyProgressAdvanced()
+//                    MySwitch()
+//                    MyCheckBox()
+
+//                    var state by rememberSaveable {
+//                        mutableStateOf(false)
+//                    }
+//                    val checkInfo = CheckInfo(
+//                        title = "Ejemplo Completo",
+//                        selected = state,
+//                        onCheckedChange = { newState -> state = newState }
+////                        onCheckedChange ={state={it}}
+//                    )
+//                    val myOptions = getOptions(listOf("Jose", "Caro", "Toby", "Bruno"))
+//                    Column(Modifier.padding(vertical = 30.dp)) {
+//                        myOptions.forEach{
+//                            option -> MyCheckBockWithTextCompleted(option)
+//                    }
+//                        myOptions.forEach{
+//                            MyCheckBockWithTextCompleted(it)
+//                        }
+
+//                        MyCheckBockWithText()
+                    }
+
+//                    MyTriStatusCheckBox()
+//                    MyRadioButton()
                 }
             }
         }
     }
-}
+
+
+//@Composable
+//fun getOptions(titles: List<String>): List<CheckInfo> {
+//    return titles.map {
+//        var state by rememberSaveable {
+//            mutableStateOf(false)
+//        }
+//        CheckInfo(
+//            title = it,
+//            selected = state,
+//            onCheckedChange = { newState -> state = newState }
+////                        onCheckedChange ={state={it}}
+//        )
+//
+//    }
+//}
 
 
 
@@ -84,11 +134,11 @@ class MainActivity : ComponentActivity() {
 //    apiLevel = 29,
 //    showSystemUi = true,
 //)
-@Composable
-fun RenderFunction() {
-//    ConstraintExample()
-    ConstrainExampleGuide()
-}
+//@Composable
+//fun RenderFunction() {
+////    ConstraintExample()
+//    ConstrainExampleGuide()
+//}
 
 
 
