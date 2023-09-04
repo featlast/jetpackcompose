@@ -1,6 +1,7 @@
 package com.example.coursejetpackcompose
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -20,6 +21,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -55,7 +57,24 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MyDropDownMenu()
+                    var show by remember {
+                        mutableStateOf(false)
+                    }
+                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Button(onClick = {show=true }) {
+                            Text(text = "Mostrar Dialog")
+                        }
+                        MyConfirmationDialog(show, onDismiss = {show=false})
+//                        CustomDialog(show, onDismiss = {show=false})
+//                        MySimpleCustomDialog(show, onDismiss = {show=false})
+
+//                        MyDialog(show, onDismiss = {show=false}, onConfirm = { Log.i("Jose", "Click")})
+
+                    }
+//                    MyRangeSlider()
+//                    AdvacendSlider()
+//                    BasicSlider()
+//                    MyDropDownMenu()
 //                        MyCard()
 
 
