@@ -42,6 +42,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import com.example.coursejetpackcompose.ui.theme.CourseJetPackComposeTheme
 import com.example.coursejetpackcompose.ui.theme.MyTextFieldAdvanced
+import com.example.coursejetpackcompose.ui.theme.RetoTwitter
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +55,8 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LoginScreen()
+                    RetoTwitter()
+//                    LoginScreen()
 //                    MyDropDownMenu()
 //                        MyCard()
 
